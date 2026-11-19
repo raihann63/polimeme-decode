@@ -370,4 +370,39 @@ class InferenceService:
         }
 
 
+
+def ensure_quantized_checkpoint():
+    if MODEL_VARIANT != "quantized":
+        return
+
+    if MODEL_PATH.is_file() and MODEL_PATH.stat().st_size > 300 * 1024 * 1024:
+        return
+
+    import shutil
+    from urllib.request import urlopen
+
+    url = (
+        "https://github.com/raihann63/polimeme-decode/"
+        "releases/download/v1.0-model/best_model_quantized.pt"
+    )
+
+    LOGGER.info("Downloading quantized model from GitHub Releases")
+    MODEL_PATH.parent.mkdir(parents=True, exist_ok=True)
+    temporary = MODEL_PATH.with_suffix(".pt.part")
+
+    try:
+        with urlopen(url, timeout=120) as source, temporary.open("wb") as output:
+            shutil.copyfileobj(source, output, length=1024 * 1024)
+
+        if temporary.stat().st_size < 300 * 1024 * 1024:
+            raise RuntimeError("Downloaded model file is incomplete")
+
+        temporary.replace(MODEL_PATH)
+        LOGGER.info("Quantized model downloaded successfully")
+    finally:
+        temporary.unlink(missing_ok=True)
+
+
+ensure_quantized_checkpoint()
 inference_service = InferenceService()
+
