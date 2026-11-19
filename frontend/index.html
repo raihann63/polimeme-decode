@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#08101c" />
+  <meta name="description" content="PoliMeme Decode — a multimodal AI interface for classifying political and non-political memes." />
+  <title>PoliMeme Decode | Multimodal Meme Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <svg class="svg-sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-scan" viewBox="0 0 24 24"><path d="M7 3H5a2 2 0 0 0-2 2v2m14-4h2a2 2 0 0 1 2 2v2M7 21H5a2 2 0 0 1-2-2v-2m14 4h2a2 2 0 0 0 2-2v-2M3 12h18"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 16V4m-5 5 5-5 5 5M4 16v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-brain" viewBox="0 0 24 24"><path d="M12 6a4 4 0 0 0-7-2.3A4.5 4.5 0 0 0 3.5 11a4.5 4.5 0 0 0 1.4 7.3A4 4 0 0 0 12 18V6Zm0 0a4 4 0 0 1 7-2.3A4.5 4.5 0 0 1 20.5 11a4.5 4.5 0 0 1-1.4 7.3A4 4 0 0 1 12 18"/><path d="M8 9c2 0 3 1 4 3m4-3c-2 0-3 1-4 3"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V10m6 10V4m5 16v-7m5 7V8M2 20h20"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 0-14-5L4 8m0-5v5h5M4 13a8 8 0 0 0 14 5l2-2m0 5v-5h-5"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 22-1.5-.6C5.5 19 4 15.6 4 11V5l8-3 8 3v6c0 4.6-1.5 8-6.5 10.4L12 22Z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+  </svg>
+
+  <div class="backdrop-grid" aria-hidden="true"></div>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="#top" class="brand" aria-label="PoliMeme Decode home">
+        <span class="brand-mark"><svg class="icon"><use href="#i-scan"/></svg></span>
+        <span>POLI<span class="brand-accent">MEME</span><span class="brand-light"> / DECODE</span></span>
+      </a>
+      <nav class="topnav" aria-label="Main navigation">
+        <a href="#analyzer" class="nav-active">Analyzer</a>
+        <a href="#method">Method</a>
+        <a href="#insights">Model insights</a>
+      </nav>
+      <a class="topbar-cta" href="#analyzer">Launch analyzer <svg class="icon"><use href="#i-arrow"/></svg></a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> MULTIMODAL IMAGE INTELLIGENCE <span class="eyebrow-line"></span> V1.0</div>
+        <h1 id="hero-title">Beyond the image.<br /><span>Decode the message.</span></h1>
+        <p class="hero-description">An AI-powered workspace that analyzes visual and textual signals to classify memes as <strong>political</strong> or <strong>non-political</strong>.</p>
+        <div class="hero-points"><span><svg class="icon"><use href="#i-check"/></svg> Image + text fusion</span><span><svg class="icon"><use href="#i-check"/></svg> Bangla & English OCR</span><span><svg class="icon"><use href="#i-check"/></svg> Research-backed model</span></div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="visual-center"><svg class="icon"><use href="#i-brain"/></svg><span>FUSION<br />ENGINE</span></div>
+        <div class="floating-pill pill-one"><span class="mini-dot cyan"></span> VISUAL FEATURES</div>
+        <div class="floating-pill pill-two"><span class="mini-dot violet"></span> OCR TEXT SIGNAL</div>
+        <div class="floating-pill pill-three"><span class="mini-dot green"></span> CLASSIFICATION</div>
+        <span class="visual-cross cross-a">+</span><span class="visual-cross cross-b">+</span>
+      </div>
+    </section>
+
+    <section id="analyzer" class="workspace container" aria-labelledby="workspace-title">
+      <div class="section-heading"><div><div class="section-kicker">01 / ANALYSIS WORKSPACE</div><h2 id="workspace-title">Meme Analyzer</h2><p>Upload a meme. The model will analyze its content when the inference API is available.</p></div><div class="connection" id="connectionStatus" role="status" aria-live="polite"><span class="connection-dot"></span><span id="connectionText">Checking inference API…</span></div></div>
+
+      <div class="workspace-grid">
+        <div class="panel upload-panel">
+          <div class="panel-top"><div class="panel-label"><svg class="icon"><use href="#i-image"/></svg> INPUT / IMAGE</div><span class="panel-index">01</span></div>
+          <input type="file" id="imageInput" accept="image/jpeg,image/png,image/webp" class="visually-hidden" aria-describedby="fileHint" />
+          <div id="dropZone" class="dropzone" role="button" tabindex="0" aria-label="Choose an image or drop it here">
+            <div id="dropPlaceholder" class="drop-placeholder">
+              <span class="upload-symbol"><svg class="icon"><use href="#i-upload"/></svg></span>
+              <h3>Drop your meme here</h3>
+              <p>Drag & drop or <span class="inline-link">browse from device</span></p>
+              <span class="file-hint" id="fileHint">JPEG, PNG or WebP · Max 8 MB</span>
+            </div>
+            <div class="image-preview hidden" id="imagePreviewWrap">
+              <img id="imagePreview" alt="Selected meme preview" />
+              <div class="preview-badge"><svg class="icon"><use href="#i-check"/></svg> IMAGE LOADED</div>
+            </div>
+          </div>
+          <div class="file-row hidden" id="fileRow"><div class="file-meta"><svg class="icon"><use href="#i-image"/></svg><span><strong id="fileName"></strong><small id="fileSize"></small></span></div><button class="icon-button" type="button" id="removeFile" aria-label="Remove selected image"><svg class="icon"><use href="#i-close"/></svg></button></div>
+          <div class="upload-actions"><button id="analyzeBtn" type="button" class="btn btn-primary" disabled><span id="analyzeBtnLabel">Analyze meme</span><svg class="icon" id="analyzeBtnArrow"><use href="#i-arrow"/></svg><span class="spinner hidden" id="spinner"></span></button><button class="btn btn-secondary" type="button" id="resetBtn">Reset</button></div>
+          <div class="inline-notice" id="uploadNotice" role="status" aria-live="polite">Select an image to get started. No image is uploaded until you click Analyze.</div>
+        </div>
+
+        <div class="panel result-panel">
+          <div class="panel-top"><div class="panel-label"><svg class="icon"><use href="#i-scan"/></svg> OUTPUT / PREDICTION</div><span class="panel-index">02</span></div>
+          <div id="resultEmpty" class="result-empty"><div class="result-graphic"><div class="result-graphic-core"><svg class="icon"><use href="#i-scan"/></svg></div></div><h3>Awaiting an image</h3><p>Your classification result and extracted text will appear here after model inference.</p><div class="result-placeholder-bars"><span></span><span></span><span></span></div></div>
+          <div id="resultData" class="result-data hidden" aria-live="polite">
+            <div class="result-overline">CLASSIFICATION RESULT</div>
+            <div class="prediction-heading"><div><div class="prediction-label" id="predictionLabel">—</div><p id="predictionDescription"></p></div><span class="prediction-tag" id="predictionTag">AI RESULT</span></div>
+            <div class="confidence-heading"><span>Model confidence</span><strong id="confidenceText">—</strong></div><div class="meter-track"><div id="confidenceMeter" class="meter-fill"></div></div>
+            <div class="probabilities"><div class="prob-label"><span>Political</span><strong id="politicalProb">—</strong></div><div class="prob-track"><div id="politicalBar" class="prob-fill politics"></div></div><div class="prob-label"><span>Non-political</span><strong id="nonPoliticalProb">—</strong></div><div class="prob-track"><div id="nonPoliticalBar" class="prob-fill nonpolitics"></div></div></div>
+            <div class="ocr-box"><div class="ocr-heading"><span>EXTRACTED TEXT / OCR</span><span id="latencyText"></span></div><p id="ocrText">—</p></div>
+            <div class="result-disclaimer"><svg class="icon"><use href="#i-shield"/></svg> This is a model-generated content category, not a fact-check or endorsement.</div>
+          </div>
+          <div id="resultError" class="result-error hidden" role="alert"><span class="error-symbol">!</span><div><h3>Inference unavailable</h3><p id="errorText">Check that the backend is running and try again.</p><button class="retry-button" id="retryBtn" type="button"><svg class="icon"><use href="#i-refresh"/></svg> Retry connection</button></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="method" class="method-section container" aria-labelledby="method-title"><div class="section-kicker">02 / HOW IT WORKS</div><div class="section-split"><div><h2 id="method-title">One image.<br /><span>Two perspectives.</span></h2><p>The multimodal pipeline combines what a meme looks like with what its text says, then produces a category prediction.</p></div><div class="steps"><div class="step"><span class="step-num">01</span><div><h3>Visual understanding</h3><p>A Vision Transformer extracts visual features from the uploaded image.</p></div><svg class="icon"><use href="#i-chevron"/></svg></div><div class="step"><span class="step-num">02</span><div><h3>Text understanding</h3><p>OCR extracts Bangla or English text, which is processed using RoBERTa.</p></div><svg class="icon"><use href="#i-chevron"/></svg></div><div class="step"><span class="step-num">03</span><div><h3>Multimodal fusion</h3><p>Visual and textual representations are fused to classify the meme.</p></div><svg class="icon"><use href="#i-chevron"/></svg></div></div></div></section>
+
+    <section id="insights" class="insights-section container" aria-labelledby="insights-title"><div class="section-heading"><div><div class="section-kicker">03 / RESEARCH SNAPSHOT</div><h2 id="insights-title">Model insights</h2><p>Reported validation results from the project's evaluation report.</p></div><span class="insight-chip"><svg class="icon"><use href="#i-chart"/></svg> VALIDATION METRICS</span></div>
+      <div class="metric-grid"><div class="metric-card"><span class="metric-name">FUSION ACCURACY</span><div class="metric-value">88.34<span>%</span></div><p>Validation accuracy</p><div class="metric-accent cyan-accent"></div></div><div class="metric-card"><span class="metric-name">MACRO F1</span><div class="metric-value">84.81<span>%</span></div><p>Across both classes</p><div class="metric-accent violet-accent"></div></div><div class="metric-card"><span class="metric-name">ROC–AUC</span><div class="metric-value">90.75<span>%</span></div><p>Validation discrimination</p><div class="metric-accent green-accent"></div></div></div>
+      <div class="benchmark-panel"><div class="benchmark-heading"><div><h3>Ablation comparison</h3><p>Accuracy by model configuration</p></div><span>VALIDATION / ACCURACY</span></div><div class="benchmark-row"><span>Image only</span><div class="benchmark-track"><div class="benchmark-fill img-bar" style="width:85.31%"></div></div><strong>85.31%</strong></div><div class="benchmark-row"><span>Text only (RoBERTa branch)</span><div class="benchmark-track"><div class="benchmark-fill text-bar" style="width:68.53%"></div></div><strong>68.53%</strong></div><div class="benchmark-row"><span>Multimodal fusion</span><div class="benchmark-track"><div class="benchmark-fill fusion-bar" style="width:88.34%"></div></div><strong>88.34%</strong></div><div class="benchmark-note"><svg class="icon"><use href="#i-shield"/></svg><span><strong>Evaluation transparency:</strong> A separate TF–IDF + Logistic Regression text baseline reached <strong>93.47% accuracy</strong> on the reported evaluation. The fusion model is not the highest-scoring evaluated baseline.</span></div></div>
+    </section>
+  </main>
+  <footer class="footer"><div class="container footer-inner"><span>© <span id="copyrightYear">2026</span> POLIMEME / DECODE</span><p>Experimental AI classification · Not political opinion or fact-checking</p><a href="#top">Back to top ↑</a></div></footer>
+</body>
+</html>
